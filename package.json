@@ -1,0 +1,22 @@
+{
+  "name": "@2nd-bird/threadloom",
+  "version": "0.1.0",
+  "description": "Weave your AI conversations into your knowledge base.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/2nd-Bird/threadloom.git" },
+  "homepage": "https://github.com/2nd-Bird/threadloom#readme",
+  "bugs": { "url": "https://github.com/2nd-Bird/threadloom/issues" },
+  "type": "module",
+  "bin": { "threadloom": "dist/bin/threadloom.js" },
+  "files": ["dist", "README.md", "README.ja.md", "LICENSE", "NOTICE", "THIRD_PARTY_LICENSES.md"],
+  "engines": { "node": ">=20" },
+  "packageManager": "pnpm@10.17.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": { "chrome-remote-interface": "^0.34.0", "commander": "^13.1.0" },
+  "devDependencies": { "@types/chrome-remote-interface": "^0.34.0", "@types/node": "^22.13.0", "typescript": "^5.7.3", "vitest": "^3.0.5" }
+}
